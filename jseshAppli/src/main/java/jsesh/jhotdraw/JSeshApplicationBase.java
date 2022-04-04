@@ -121,6 +121,7 @@ public class JSeshApplicationBase {
         defaultDrawingSpecifications.setMaxCadratHeight((float) preferences.getDouble(JSeshInfoConstants.JSESH_MAX_QUADRANT_HEIGHT, 18));
         defaultDrawingSpecifications.setMaxCadratWidth((float) preferences.getDouble(JSeshInfoConstants.JSESH_MAX_QUADRANT_WIDTH, 22));
         defaultDrawingSpecifications.setSmallSignsCentered(preferences.getBoolean(JSeshInfoConstants.JSESH_SMALL_SIGNS_CENTRED, false));
+	defaultDrawingSpecifications.setJustify(preferences.getBoolean(JSeshInfoConstants.JSESH_JUSTIFIED, false));
 
         defaultDrawingSpecifications.setSmallBodyScaleLimit(preferences.getDouble(
                 JSeshInfoConstants.JSESH_SMALL_BODY_SCALE_LIMIT, 12.0));
@@ -143,6 +144,7 @@ public class JSeshApplicationBase {
         preferences.putDouble(JSeshInfoConstants.JSESH_MAX_QUADRANT_HEIGHT, defaultDrawingSpecifications.getMaxCadratHeight());//ok
         preferences.putDouble(JSeshInfoConstants.JSESH_MAX_QUADRANT_WIDTH, defaultDrawingSpecifications.getMaxCadratWidth());//ok
         preferences.putBoolean(JSeshInfoConstants.JSESH_SMALL_SIGNS_CENTRED, defaultDrawingSpecifications.isSmallSignsCentered());//ok
+	preferences.putBoolean(JSeshInfoConstants.JSESH_JUSTIFIED, defaultDrawingSpecifications.isJustified());//ok
         preferences.putDouble(JSeshInfoConstants.JSESH_SMALL_BODY_SCALE_LIMIT, defaultDrawingSpecifications.getSmallBodyScaleLimit());//ok
         preferences.putBoolean(JSeshInfoConstants.JSESH_USE_LINES_FOR_SHADING, defaultDrawingSpecifications.getShadingStyle().equals(ShadingStyle.LINE_HATCHING));//ok
         preferences.putDouble(JSeshInfoConstants.JSESH_CARTOUCHE_LINE_WIDTH, defaultDrawingSpecifications.getCartoucheLineWidth());	//ok
